@@ -1,0 +1,174 @@
+#welcomeSection {
+    width: 100%;
+    background: #679289;
+    padding:50px;
+    color:white;
+    text-align:center;
+} 
+
+#litterAmountSection {
+    width: 100%;
+    padding:10px;
+    background: #1d7874; 
+    text-align:center; 
+} 
+
+#litterAmountSection p {
+    font-size:24px;
+    color:white;
+    font-family: 'Permanent Marker';
+    margin:0;
+}
+
+#aboutSection {
+    width: 100%;
+    background: white;
+    padding: 50px;
+}
+
+#aboutSection p {
+    font-family:"Raleway";
+    font-size:14px;
+} 
+
+#aboutSection h3 {
+    font-family:"Permanent Marker";
+    font-size:40px;
+} 
+
+#kittensBtn {
+    margin-top:70px;
+    padding:15px; 
+    font-family:"Anton";
+    background-color: #e76f51; 
+    border-color: #e76f51; 
+    color:white;
+    font-size:24px;
+    border-radius:100px;
+    text-align:center;
+}
+
+#kittensBtn:hover { 
+    background-color: #1d7874; 
+    border-color: #1d7874;  
+}
+
+#welcomeSection h5 {
+    font-size:70px;
+    font-family: "Anton";
+}
+
+#welcomeSection h1 {
+    font-size:35px;
+    font-family: "Anton";
+}
+
+#imageSection {
+    padding:50px;
+} 
+ 
+@media screen and (min-width:360px) {   
+    .homeImage {
+        width:100%;border-radius:5px; 
+    } 
+}  
+
+@media screen and (max-width: 360px) { 
+    .homeImage { 
+        border-radius:0px; 
+    } 
+    .container {
+        padding:0;
+        margin:0;
+    }
+    #imgCol_1 {
+        padding:0px;
+        margin:0px;
+    } 
+    #imgRow {
+        width:100%; 
+        margin:0px;
+    } 
+    #imageSection {
+        padding:0px;
+    }
+    #kittensBtn {
+        margin:0px;
+    } 
+    #aboutSection { 
+        padding: 25px;
+    } 
+    #welcomeSection h5 {
+        font-size:50px;
+        font-family: "Anton";
+    } 
+    #welcomeSection h1 {
+        font-size:25px;
+        font-family: "Anton";
+    } 
+  }
+
+@media screen and (max-width: 767px) {    
+    #imgCol_2  {
+        display:none;
+    } 
+  }
+
+  @media screen and (max-width: 992px) {    
+    #imgCol_3 {
+        display:none;
+    } 
+  }
+
+
+
+
+
+
+  .loader { 
+    position:relative;
+    z-index: 1;
+    width: 50px;
+    height: 50px;
+    margin-left:44%;
+    margin-top:17%;
+    border: 7px solid #e0e0e0;
+    border-radius: 50%;
+    border-top: 7px solid #000000;
+    width: 50px;
+    height: 50px;
+    -webkit-animation: spin 0.5s linear infinite;
+    animation: spin 0.5s linear infinite;
+  }
+  
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* Add animation to "page content" */
+  .animate-bottom {
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 1s;
+    animation-name: animatebottom;
+    animation-duration: 1s
+  }
+  
+  @-webkit-keyframes animatebottom {
+    from { bottom:-100px; opacity:0 } 
+    to { bottom:0px; opacity:1 }
+  }
+  
+  @keyframes animatebottom { 
+    from{ bottom:-100px; opacity:0 } 
+    to{ bottom:0; opacity:1 }
+  }
+
+
+ 

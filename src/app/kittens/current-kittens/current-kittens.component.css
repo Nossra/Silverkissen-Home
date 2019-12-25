@@ -1,0 +1,46 @@
+.card {
+    float:left;
+    margin:30px;
+}
+
+.parentsHeader {
+
+}
+
+#welcomeSection {
+    width: 100%;
+    background: #679289;
+    padding:50px;
+    color:white;
+    text-align:center;
+}  
+
+#welcomeSection h5 {
+    font-size:70px;
+    font-family: "Anton";
+} 
+
+#readMoreBtn {  
+        padding:10px; 
+        font-family:"Anton";
+        background-color: #e76f51; 
+        border-color: #e76f51; 
+        color:white;
+        font-size:14px;
+        border-radius:100px;
+        text-align:center; 
+
+}
+
+readMoreBtn:hover {
+    background-color: #1d7874; 
+    border-color: #1d7874; 
+} 
+
+@media screen and (max-width: 360px) {  
+
+    #welcomeSection h5 {
+        font-size:50px;
+        font-family: "Anton";
+    } 
+  }
