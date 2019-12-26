@@ -1,11 +1,35 @@
 <section id="welcomeSection">
-        <div class="row">
-            <div class="col-sm-12">
-                <h5>NUVARANDE KATTUNGAR</h5> 
-            </div> 
-        </div>  
-    </section>
-    
+    <div class="row">
+        <div class="col-sm-12">
+            <h5>NUVARANDE KULLAR</h5> 
+        </div> 
+    </div>  
+</section>
+
+<div class="container">
+        <div class="loader" *ngIf="loading"></div>
+        <div *ngIf="loading == false"> 
+            <section id="litterSection">
+                <div *ngFor="let litter of litters; let i = index"> 
+                    <div class="col-lg-12">
+                        <div class="card custom-card">
+                            <img src="{{litter.images[0].value}}" class="card-img-top image-card">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    {{ litter.parents.length == 0 ? ''
+                                    : litter.parents.length == 1 && litter.parents.length > 0 ? 'Från ' + litter.parents[0].name
+                                    : 'Från ' + litter.parents[0].name + ' och ' + litter.parents[1].name }}
+                                </h5>
+                                <p class="card-text custom-card-text">{{litter.notes}}</p>
+                                <button class="btn" id="readMoreBtn" [routerLink]="['/kull', litter.id]">Läs mer</button>
+                            </div>
+                        </div> 
+                    </div>  
+                </div> 
+            </section>
+        </div> 
+    </div> 
+<!--     
 <div class="container">
     <section id="litterSection">
         <div *ngFor="let litter of litters; let i = index">
@@ -17,7 +41,11 @@
                         : 'Från ' + litter.parents[0].name + ' och ' + litter.parents[1].name }}
                     </h5> 
                 </div>
-            </div>
+            </div>  
+                    <div class="image-card">
+                        <img src="{{litter.images[0].value}}">
+                    </div> 
+                </div> 
             <div class="row">
                 <div class="col-lg-12 notes">
                     <p>
@@ -26,42 +54,13 @@
                 </div> 
             </div>
             <div class="row">
-                <div class="col-lg-12 customSlideShow">
-                    <!-- <ngx-slideshow-acracode 
-                        [images]="arrays[i]" > 
-                    </ngx-slideshow-acracode> -->
-                    <div id="carouselExampleControls_{{litter.id}}" class="carousel slide" data-ride="carousel"> 
-                        <div class="carousel-inner"> 
-                            <div *ngFor="let img of litter.images; let i = index">
-                                <div *ngIf="i == 0" class="carousel-item active">
-                                    <img class="d-block w-100" src="{{img.value}}" alt="First slide">
-                                </div>
-                                <div *ngIf="i > 0" class="carousel-item">
-                                    <img class="d-block w-100" src="{{img.value}}" alt="First slide">
-                                </div> 
-                            </div>  
-                        </div>
-                    </div>
-                    <div>
-                        <a class="carousel-control-prev" href="#carouselExampleControls_{{litter.id}}" role="button" data-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="carousel-control-next" href="#carouselExampleControls_{{litter.id}}" role="button" data-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Next</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
                 <div class="col-lg-12">
                     <button class="btn" id="readMoreBtn" [routerLink]="['/kull', litter.id]">Läs mer</button>
                 </div>
             </div>
         </div> 
     </section>
-</div>
+</div> -->
 
 <!-- <div class="container">
     <section>

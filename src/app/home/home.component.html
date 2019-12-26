@@ -1,5 +1,5 @@
-<div class="loader" *ngIf="loading"></div>
-<div *ngIf="loading == false">
+ 
+
     <section id="welcomeSection">
         <div class="row">
             <div class="col-sm-12">
@@ -12,7 +12,11 @@
         <div class="row" style="max-width:100%;">
             <div class="col-sm-6 offset-sm-3">
                 <!-- <h5>Antal kullar</h5> -->
-                <p>{{getLitterText(this.litters.length)}}</p>
+                <div class="loader" *ngIf="loading"></div>
+                <div *ngIf="loading == false">
+                    <p>{{getLitterText(this.litters.length)}}</p>
+                </div>
+                
             </div>
         </div>
     </section>
@@ -49,14 +53,5 @@
                     <button class="btn" routerLink="kattungar" id="kittensBtn">Till kattungarna</button>
                 </div>
             </div>
-        </section>
-        <!-- <section id="aboutSection">
-            <div class="row">
-                <div class="col-md-12">
-                    {{getLitterText(this.litters.length)}}
-                </div>
-            </div>
-        </section> -->
-    </div>
-    
-</div>
+        </section> 
+    </div> 

@@ -1,0 +1,21 @@
+
+#welcomeSection {
+    width: 100%;
+    background: #679289;
+    padding:50px;
+    color:white;
+    text-align:center;
+}  
+
+#welcomeSection h5 {
+    font-size:70px;
+    font-family: "Anton";
+} 
+
+@media screen and (max-width: 360px) {  
+
+    #welcomeSection h5 {
+        font-size:50px;
+        font-family: "Anton";
+    } 
+  }

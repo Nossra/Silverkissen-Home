@@ -15,12 +15,7 @@ export class HomeComponent implements OnInit {
     this.litterService.getActiveLitters().subscribe(x => {
       this.litters = x;
       this.loading = false; 
-    }) 
-  
-      // document.getElementById("imageSection_1").innerHTML = "<img src=\"../assets/random_kattunge.jpg\" alt=\"ragdollungar till salu\" style=\"height:300px; max-width:100%;border-radius:10px;\">"
-      // document.getElementById("imageSection_2").innerHTML = "<img src=\"../assets/vilde_2_sover.jpg\" alt=\"kattungar kronoberg\" style=\"height:300px; max-width:100%;border-radius:10px;\">"
-      // document.getElementById("imageSection_3").innerHTML = "<img src=\"../assets/scamander_siri.jpg\" alt=\"köpa kattunge\" style=\"height:300px; max-width:100%;border-radius:10px;\">"
- 
+    });  
   } 
 
   getLitterText(litterCount:number) :string {
