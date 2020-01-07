@@ -1,1 +1,65 @@
-<p>parents works!</p>
+<section id="welcomeSection">
+    <div class="row">
+        <div class="col-sm-12">
+            <h5>VÅRA FÖRÄLDRAR</h5> 
+        </div> 
+    </div>  
+</section>
+
+<div class="container">  
+    <div class="loader" *ngIf="loading"></div>
+    <div *ngIf="loading == false"> 
+        <section id="parentSection">  
+            <div *ngFor="let parent of parents">
+                <div class="row padding-top">
+                    <div class="col-lg-12">
+                        <h5>{{parent.name}}, {{parent.age}} år</h5> 
+                    </div>
+                </div>
+                <div class="row padding-bottom"> 
+                    <div class="col-lg-12">  
+                            <img *ngIf="parent.images.length > 0" src="{{parent.images[0].value}}" class="img-custom" data-toggle="modal" attr.data-target="#modal_{{parent.id}}"> 
+                        <div id="notes">
+                            <p>{{parent.notes}}</p>
+                        </div>
+                        <div id="color">
+                            <p>{{parent.color}}</p>
+                        </div> 
+                    </div>   
+                </div>  
+            </div> 
+        </section> 
+
+        <div *ngFor="let parent of parents">
+            <div class="modal fade" id="modal_{{parent.id}}" style="padding:0;" tabindex="-1" role="dialog" attr.aria-labelledby="modal_{{parent.id}}_label" aria-hidden="true">
+                <div class="modal-dialog" style="max-width:65% !important; margin: 50px auto;" role="document">
+                    <div class="modal-content"> 
+                        <div class="modal-body background-black" style="padding:0;">
+                                <div id="carousel_{{parent.id}}" class="carousel slide" data-ride="carousel">
+                                <!-- <ol class="carousel-indicators">
+                                    <li ngFor="let image of parent.images; let j = index" attr.data-target="#carousel_{{parent.id}}" [attr.data-slide-to]="j" class="{{ (j == 0) ? 'active' : ''}}"></li> 
+                                </ol> -->
+                                <div class="carousel-inner background-black">
+                                    <div *ngFor="let image of parent.images; let i = index" class="carousel-item {{ (i == 0) ? 'active' : ''}}">
+                                        <img class="d-block img-fluid img-margin" src="{{image.value}}">
+                                    </div>  
+                                    <button type="button" class="close custom-close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <a class="carousel-control-prev" href="#carousel_{{parent.id}}" role="button" data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Föregående</span>
+                                </a>
+                                <a class="carousel-control-next" href="#carousel_{{parent.id}}" role="button" data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Nästa</span>
+                                </a>
+                            </div> 
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

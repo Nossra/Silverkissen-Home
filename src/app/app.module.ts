@@ -7,9 +7,9 @@ import { ParentsComponent } from './parents/parents.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NavComponent } from './nav/nav.component';
 import { FooterComponent } from './footer/footer.component'; 
-import { LitterService } from './services/LitterService/litter-service.service';
-import { CatServiceService } from './services/CatService/cat-service.service';
+import { LitterService } from './services/LitterService/litter-service.service'; 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CatService } from './services/CatService/cat-service.service';
 
 @NgModule({
   declarations: [
@@ -25,7 +25,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HttpClientModule,
     BrowserAnimationsModule
   ],
-  providers: [LitterService,CatServiceService],
+  providers: [LitterService,CatService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

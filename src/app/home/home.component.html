@@ -1,57 +1,57 @@
- 
 
-    <section id="welcomeSection">
-        <div class="row">
-            <div class="col-sm-12">
-                <h5>SILVERKISSENS KATTERI</h5>
-                <h1>Ragdollungar till salu</h1>
-            </div> 
-        </div>  
-    </section>
-    <section id="litterAmountSection">
-        <div class="row" style="max-width:100%;">
-            <div class="col-sm-6 offset-sm-3">
-                <!-- <h5>Antal kullar</h5> -->
-                <div class="loader" *ngIf="loading"></div>
-                <div *ngIf="loading == false">
-                    <p>{{getLitterText(this.litters.length)}}</p>
-                </div>
-                
+
+<section id="welcomeSection">
+    <div class="row">
+        <div class="col-sm-12">
+            <h5>SILVERKISSENS KATTERI</h5>
+            <h1>Ragdollungar till salu</h1>
+        </div> 
+    </div>  
+</section>
+<section id="litterAmountSection">
+    <div class="row" style="max-width:100%;">
+        <div class="col-sm-6 offset-sm-3">
+            <!-- <h5>Antal kullar</h5> -->
+            <div class="loader" *ngIf="loading"></div>
+            <div *ngIf="loading == false">
+                <p>{{getLitterText(this.litters.length)}}</p>
             </div>
+            
+        </div>
+    </div>
+</section>
+
+<div class="container">
+    <section id="imageSection">
+        <div class="row text-center" id="imgRow">  
+            <div class="col-lg-4 col-md-6" id="imgCol_1">
+                <div>
+                    <img src="../assets/random_kattunge.jpg" alt="ragdollungar till salu"  class="homeImage">
+                </div>
+            </div> 
+            <div class="col-lg-4 col-md-6" id="imgCol_2">
+                <div>
+                    <img src="../assets/vilde_2_sover.jpg" alt="kattungar kronoberg"  class="homeImage">
+                </div>
+            </div>
+            <div class="col-lg-4" id="imgCol_3">
+                <div>
+                    <img src="../assets/scamander_siri.jpg" alt="köpa kattunge"  class="homeImage">
+                </div>
+            </div> 
         </div>
     </section>
-
-    <div class="container">
-        <section id="imageSection">
-            <div class="row text-center" id="imgRow">  
-                <div class="col-lg-4 col-md-6" id="imgCol_1">
-                    <div>
-                        <img src="../assets/random_kattunge.jpg" alt="ragdollungar till salu"  class="homeImage">
-                    </div>
-                </div> 
-                <div class="col-lg-4 col-md-6" id="imgCol_2">
-                    <div>
-                        <img src="../assets/vilde_2_sover.jpg" alt="kattungar kronoberg"  class="homeImage">
-                    </div>
-                </div>
-                <div class="col-lg-4" id="imgCol_3">
-                    <div>
-                        <img src="../assets/scamander_siri.jpg" alt="köpa kattunge"  class="homeImage">
-                    </div>
-                </div> 
+    <section id="aboutSection">
+        <div class="row"> 
+            <div class="col-sm-12 col-md-6 col-lg-6">
+                <h3>Om silverkissen</h3>
+                <p>text text text texttext text text texttext text tetext text texttext text text texttext text text texttext text text texttext text text texttext text text texttext text text texttext text text texttext text text text</p>
+                <p>text text text texttext text texttext text text texttext text text texttext text text texttext text text texttext text text text</p>
+                <p>text text text texttext text text texttext text text texttext text text texttext txt texttext text text texttext text text texttext text text texttext text text text</p>
+            </div> 
+            <div class="col-sm-12 col-md-6 col-lg-6 text-center">
+                <button class="btn" routerLink="kattungar" id="kittensBtn">Till kattungarna</button>
             </div>
-        </section>
-        <section id="aboutSection">
-            <div class="row"> 
-                <div class="col-sm-12 col-md-6 col-lg-6">
-                    <h3>Om silverkissen</h3>
-                    <p>text text text texttext text text texttext text tetext text texttext text text texttext text text texttext text text texttext text text texttext text text texttext text text texttext text text texttext text text text</p>
-                    <p>text text text texttext text texttext text text texttext text text texttext text text texttext text text texttext text text text</p>
-                    <p>text text text texttext text text texttext text text texttext text text texttext txt texttext text text texttext text text texttext text text texttext text text text</p>
-                </div> 
-                <div class="col-sm-12 col-md-6 col-lg-6 text-center">
-                    <button class="btn" routerLink="kattungar" id="kittensBtn">Till kattungarna</button>
-                </div>
-            </div>
-        </section> 
-    </div> 
+        </div>
+    </section> 
+</div> 

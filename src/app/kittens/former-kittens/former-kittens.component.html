@@ -1,7 +1,37 @@
 <section id="welcomeSection">
-        <div class="row">
-            <div class="col-sm-12">
-                <h5>TIDIGARE KULLAR</h5> 
+    <div class="row">
+        <div class="col-sm-12">
+            <h5>TIDIGARE KULLAR</h5> 
+        </div> 
+    </div>  
+</section>
+    
+<div class="container" style="min-height: 100%">
+    <div class="loader" *ngIf="loading"></div>
+    <div *ngIf="loading == false"> 
+        <section id="litterSection"> 
+            <div class="col-lg-12">
+                <div *ngFor="let litter of litters; let i = index"> 
+                    <a [routerLink]="['/kull', litter.id]" style="color:black;">
+                        <div class="card custom-card">
+                            <img *ngIf="litter.images.length > 0" src="{{litter.images[0].value}}" class="card-img-top image-card">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    {{ litter.parents.length == 0 ? ''
+                                    : litter.parents.length == 1 && litter.parents.length > 0 ? 'Från ' + litter.parents[0].name
+                                    : 'Från ' + litter.parents[0].name + ' och ' + litter.parents[1].name }}
+                                </h5>
+                                <p class="card-text custom-card-text">{{litter.notes}}</p>
+                                <hr>
+                                <div *ngIf="litter.vaccinated"><span class="dot"></span><p class="dot-p">Vaccinerad</p></div>
+                                <div *ngIf="litter.chipped"><span class="dot"></span><p class="dot-p">Chippad</p></div>
+                                <div *ngIf="litter.pedigree"><span class="dot"></span><p class="dot-p">SVERAK</p></div>
+                                <button class="btn" id="readMoreBtn" [routerLink]="['/kull', litter.id]">Läs mer</button>
+                            </div>
+                        </div> 
+                    </a>
+                </div>  
             </div> 
-        </div>  
-    </section>
+        </section>
+    </div> 
+</div> 
