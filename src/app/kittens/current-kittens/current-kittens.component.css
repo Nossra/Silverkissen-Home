@@ -16,7 +16,7 @@
     font-family: "Anton";
 } 
 
-#readMoreBtn {  
+.readMoreBtn {  
         padding:10px; 
         font-family:"Anton";
         background-color: #e76f51; 

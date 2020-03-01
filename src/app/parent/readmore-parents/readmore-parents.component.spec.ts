@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ParentsComponent } from './parents.component';
+import { ReadmoreParentsComponent } from './readmore-parents.component';
 
-describe('ParentsComponent', () => {
-  let component: ParentsComponent;
-  let fixture: ComponentFixture<ParentsComponent>;
+describe('ReadmoreParentsComponent', () => {
+  let component: ReadmoreParentsComponent;
+  let fixture: ComponentFixture<ReadmoreParentsComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ParentsComponent ]
+      declarations: [ ReadmoreParentsComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ParentsComponent);
+    fixture = TestBed.createComponent(ReadmoreParentsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

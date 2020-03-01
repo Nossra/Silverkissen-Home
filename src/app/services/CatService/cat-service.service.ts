@@ -15,10 +15,10 @@ export class CatService {
   public getParents() : Observable<Array<Cat>> {
     let parentsUrl = this.url+'parents';
     return this.http.get<Array<Cat>>(parentsUrl);
-}
+  }
 
-public findById(id: number) : Observable<Cat> {
-    let url = this.url + id;
-    return this.http.get<Cat>(url);
-}
+  public findById(id: number) : Observable<Cat> {
+      let url = this.url + id;
+      return this.http.get<Cat>(url);
+  }
 }

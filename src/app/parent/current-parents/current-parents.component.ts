@@ -1,13 +1,13 @@
-import { Component, OnInit } from '@angular/core';
-import { Cat } from '../entities/cat'; 
-import { CatService } from '../services/CatService/cat-service.service'; 
+import { Component, OnInit } from '@angular/core'; 
+import { Cat } from '../../entities/cat';
+import { CatService } from '../../services/CatService/cat-service.service';
 
 @Component({
-  selector: 'app-parents',
-  templateUrl: './parents.component.html',
-  styleUrls: ['./parents.component.css'],
+  selector: 'app-current-parents',
+  templateUrl: './current-parents.component.html',
+  styleUrls: ['./current-parents.component.css'],
 })
-export class ParentsComponent implements OnInit {
+export class CurrentParentsComponent implements OnInit {
 
   public parents: Array<Cat> = new Array<Cat>();
   public mothers: Array<Cat> = new Array<Cat>();
