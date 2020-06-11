@@ -17,14 +17,7 @@ export class CurrentParentsComponent implements OnInit {
 
   ngOnInit() {
     this.catService.getParents().subscribe(x => {
-      this.parents = x;  
-      for (let parent of this.parents) {
-        if (parent.sex == "Hane") {
-          this.fathers.push(parent)
-        } else {
-          this.mothers.push(parent);
-        }
-      }
+      this.parents = x; 
       this.loading = false;
     });
   }

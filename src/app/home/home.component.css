@@ -1,6 +1,6 @@
 #welcomeSection {
     width: 100%;
-    background: #679289;
+    background: #ACCBE1;
     padding:50px;
     color:white;
     text-align:center;
@@ -9,21 +9,30 @@
 #litterAmountSection {
     width: 100%;
     padding:10px;
-    background: #1d7874; 
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(92,161,155,1) 100%);
     text-align:center; 
 } 
 
 #litterAmountSection p {
     font-size:24px;
     color:white;
-    font-family: 'Permanent Marker';
+    font-family: 'Oswald';
     margin:0;
 }
 
 #aboutSection {
     width: 100%;
     background: white;
-    padding: 50px;
+    padding: 30px; 
+}
+
+#btnSection {
+    width: 100%;
+    background: white;
+    padding: 30px;
+    padding-bottom: 80px;
+    text-align:center;
 }
 
 #aboutSection p {
@@ -32,26 +41,20 @@
 } 
 
 #aboutSection h3 {
-    font-family:"Permanent Marker";
+    font-family:"Oswald";
     font-size:40px;
 } 
 
-#kittensBtn {
-    margin-top:70px;
+#kittensBtn { 
     padding:15px; 
     font-family:"Anton";
-    background-color: #e76f51; 
-    border-color: #e76f51; 
+    background-color: #536B78; 
+    border-color: #536B78; 
     color:white;
     font-size:24px;
     border-radius:100px;
     text-align:center;
-}
-
-#kittensBtn:hover { 
-    background-color: #1d7874; 
-    border-color: #1d7874;  
-}
+} 
 
 #welcomeSection h5 {
     font-size:70px;

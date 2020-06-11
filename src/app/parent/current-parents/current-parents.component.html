@@ -9,38 +9,11 @@
 <div class="container">  
     <div class="loader" *ngIf="loading"></div>
     <div *ngIf="loading == false"> 
-        <section id="parentSection">  
-
-
-            <!-- <div *ngFor="let parent of parents">
-                <div class="row padding-top">
-                    <div class="col-lg-12">
-                        <h5>{{parent.name}}, {{parent.age}} år</h5> 
-                    </div>
-                </div>
-                <div class="row padding-bottom"> 
-                    <div class="col-lg-12">  
-                        <img *ngIf="parent.images.length > 0" src="{{parent.images[0].value}}" class="img-custom" data-toggle="modal" attr.data-target="#modal_{{parent.id}}"> 
-                        <div id="notes">
-                            <p>{{parent.notes}}</p>
-                        </div>
-                        <div id="color">
-                            <p>{{parent.color}}</p>
-                        </div> 
-                    </div>   
-                </div>  
-                <div class="row">
-                    <div class="col-md-12">
-                        <button class="btn btn-info">Mer om {{parent.name}}</button>
-                    </div>
-                </div>
-            </div>  -->
+        <section id="parentSection">   
 
             <div *ngFor="let parent of parents">
                 <div class="card custom-card">
-                    <img *ngIf="parent.images.length > 0" src="{{parent.images[0].value}}" class="img-custom" data-toggle="modal" attr.data-target="#modal_{{parent.id}}"> 
-                <!-- <div class="card-body"> 
-                    <a [routerLink]="['/foraldrar', parent.id]" class="btn btn-primary">Mer om {{parent.name}}</a> -->
+                    <img *ngIf="parent.images.length > 0" src="{{parent.images[0].value}}" class="img-custom" data-toggle="modal" attr.data-target="#modal_{{parent.id}}">  
                     <button class="btn readMoreBtn" [routerLink]="['/foraldrar', parent.id]">Läs mer om {{parent.name}}</button> 
                 </div>
             </div>

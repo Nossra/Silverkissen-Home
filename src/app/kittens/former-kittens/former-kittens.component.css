@@ -1,11 +1,7 @@
-.card {
-    float:left;
-    margin:30px;
-} 
 
 #welcomeSection {
     width: 100%;
-    background: #679289;
+    background: #ACCBE1;
     padding:50px;
     color:white;
     text-align:center;
@@ -16,11 +12,11 @@
     font-family: "Anton";
 } 
 
-#readMoreBtn {  
+.readMoreBtn {  
         padding:10px; 
         font-family:"Anton";
-        background-color: #e76f51; 
-        border-color: #e76f51; 
+        background-color: #536B78; 
+        border-color: #536B78; 
         color:white;
         font-size:14px;
         border-radius:100px;
@@ -29,25 +25,38 @@
 }
 
 readMoreBtn:hover {
-    background-color: #1d7874; 
-    border-color: #1d7874; 
+    opacity:0.8;
 }  
 
 .image-card { 
     height:180px; 
+    cursor:pointer;
 }
 
-.custom-card {
-    width:320px;
-    margin:40px 20px 33px;
-    -webkit-box-shadow: 2px 2px 10px 1px rgba(0,0,0,0.4);
-    -moz-box-shadow: 2px 2px 10px 1px rgba(0,0,0,0.4);
-    box-shadow: 2px 2px 10px 1px rgba(0,0,0,0.4);
+@media screen and (min-width: 360px) {  
+    .custom-card {
+        width:300px; 
+        box-shadow: 2px 2px 2px 1px rgba(0,0,0,.4)
+    }
+
+    .card {
+        float:left;
+        margin:10px;
+    } 
 }
 
-.custom-card:hover {
-    opacity:0.8;
+@media screen and (max-width: 360px) {  
+    .custom-card { 
+        box-shadow: 2px 2px 2px 1px rgba(0,0,0,.4);
+        margin:10px;
+    } 
+
+    .card {
+        float:left;
+        margin:20px;
+    } 
 }
+
 
 .custom-card-text {
     max-height:143px;

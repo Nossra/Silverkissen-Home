@@ -1,1 +1,75 @@
-{{parent.name}}
+<div class="loader" *ngIf="loading"></div>
+<div *ngIf="loading == false">
+    <section id="welcomeSection">
+        <div class="row max-width-100">
+            <div class="col-sm-12">
+                <h5>{{parent?.name.toUpperCase()}}</h5> 
+            </div> 
+        </div>  
+    </section>
+<!--         
+    <section id="sexAndAge">
+            <div class="row max-width-100">
+                <div class="col-sm-6 offset-sm-3"> 
+                    <p>{{parent?.sex}} på {{parent?.age}} år</p>  
+                </div>
+            </div>
+        </section> --> 
+
+    <section id="notes">
+        <div class="row max-width-100">
+            <div class="col-lg-2 offset-lg-2 col-md-2 offset-md-1 col-sm-12">
+                <div *ngIf="parent?.vaccinated"><span class="dot"></span><p class="dot-p"><b>Vaccinerad</b></p></div>
+                <div *ngIf="parent?.chipped"><span class="dot"></span><p class="dot-p"><b>Chippad</b></p></div>
+                <div *ngIf="parent?.pedigree"><span class="dot"></span><p class="dot-p"><b>SVERAK</b></p></div>
+            </div>
+            <div class="col-lg-6 col-md-8 col-sm-12">
+                <h3>Om {{parent?.name}}</h3>
+                <p>{{parent?.notes}}</p>
+            </div>
+        </div>
+    </section>
+    
+    
+    <section id="images">
+        <div class="row max-width-100" style="margin:0px;">
+            <div class="col-sm-12" style="padding:0px;">  
+                <div *ngIf="parent?.images.length > 0">  
+                    <div id="carousel_{{parent.id}}" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li *ngFor="let image of parent?.images; let j = index" attr.data-target="#carousel_{{parent.id}}" attr.data-slide-to="j" class="{{ (j == 0) ? 'active' : ''}}"></li> 
+                        </ol>
+                        <div class="carousel-inner grey-background carousel-size">
+                            <div *ngFor="let image of parent?.images; let i = index" class="carousel-item {{ (i == 0) ? 'active' : ''}}">
+                                <img class="d-block img-fluid img-margin carousel-img-dimensions responsive-carousel-img" style="vertical-align: middle;" src="{{image.value}}">  
+                            </div>   
+                        </div> 
+                        <a class="carousel-control-prev" href="#carousel_{{parent.id}}" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Föregående</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carousel_{{parent.id}}" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Nästa</span>
+                        </a>
+                    </div> 
+                </div> 
+            </div>
+        </div> 
+    </section>    
+<!-- 
+
+    <section id="booleans">
+        <div class="row" style="margin:0px;"> 
+            <div class="col-lg-4 col-md-4 col-sm-4">
+                <div *ngIf="parent.vaccinated" class="dot-float"><span class="dot"></span><p class="dot-p">VACCINERAD</p></div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4">
+                <div *ngIf="parent.chipped" class="dot-float"><span class="dot"></span><p class="dot-p">CHIPPAD</p></div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4">
+                <div *ngIf="parent.pedigree" class="dot-float"><span class="dot"></span><p class="dot-p">SVERAK</p></div>
+            </div>
+        </div>
+    </section> -->
+</div>

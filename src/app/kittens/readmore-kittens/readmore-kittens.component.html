@@ -1,1 +1,58 @@
-<p>readmore-kittens works!</p>
+<div class="loader" *ngIf="loading"></div>
+<div *ngIf="loading == false">
+    <section id="welcomeSection">
+        <div class="row max-width-100">
+            <div class="col-sm-12">
+                 <h5>  {{ litter.parents.length == 0 ? ''
+                        : litter.parents.length == 1 && litter.parents.length > 0 ? 'FRÅN ' + litter.parents[0].name.toUpperCase()
+                        : 'FRÅN ' + litter.parents[0].name.toUpperCase() + ' OCH ' + litter.parents[1].name.toUpperCase() }} 
+                </h5> 
+                <h3>{{getAmountOfKidsString(litter.amountOfKids)}}</h3>
+            </div> 
+        </div>  
+    </section> 
+
+    <section id="notes">
+        <div class="row max-width-100">
+            <div class="col-lg-2 offset-lg-2 col-md-2 offset-md-1 col-sm-12">
+                <div *ngIf="litter.vaccinated"><span class="dot"></span><p class="dot-p"><b>Vaccinerade</b></p></div>
+                <div *ngIf="litter.chipped"><span class="dot"></span><p class="dot-p"><b>Chippad</b></p></div>
+                <div *ngIf="litter.pedigree"><span class="dot"></span><p class="dot-p"><b>SVERAK</b></p></div>
+            </div>
+            <div class="col-lg-6 col-md-8 col-sm-12">
+                <h3>Om kullen</h3>
+                <p>{{litter.notes}}</p>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="images">
+        <div class="row" style="margin:0px;">
+            <div class="col-sm-12" style="padding:0px;">  
+                <div *ngIf="litter?.images.length > 0">  
+                    <div id="carousel_{{litter.id}}" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li *ngFor="let image of litter?.images; let j = index" attr.data-target="#carousel_{{litter.id}}" attr.data-slide-to="j" class="{{ (j == 0) ? 'active' : ''}}"></li> 
+                        </ol>
+                        <div class="carousel-inner grey-background caorusel-size">
+                            <div *ngFor="let image of litter?.images; let i = index" class="carousel-item {{ (i == 0) ? 'active' : ''}}">
+                                <img class="d-block img-fluid img-margin carousel-img-dimensions responsive-carousel-img" style="vertical-align: middle;" src="{{image.value}}">  
+                            </div>   
+                        </div> 
+                        <a class="carousel-control-prev" href="#carousel_{{litter.id}}" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Föregående</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carousel_{{litter.id}}" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Nästa</span>
+                        </a>
+                    </div> 
+                </div> 
+            </div>
+        </div> 
+    </section>    
+
+</div>
+

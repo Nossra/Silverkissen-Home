@@ -7,7 +7,7 @@ export class Litter {
     public id:number; 
     public birthDate: Date;
     public amountOfKids:number;
-    public parents:Array<Litter_Parent>; 
+    public parents:Array<Cat>; 
     public notes:string;
     public pedigree:boolean;
     public vaccinated:boolean;

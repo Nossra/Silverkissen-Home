@@ -2,7 +2,7 @@ a {
     font-size: 24px;
     text-align:center;
     color:white;
-    font-family: 'Permanent Marker';
+    font-family: 'Oswald';
 }
 
 .navbar-nav {
@@ -20,5 +20,6 @@ a {
   }
 
 .custom-nav {
-    background: #679289;
+    background: #7C98B3;
+    width:100%;
 }
